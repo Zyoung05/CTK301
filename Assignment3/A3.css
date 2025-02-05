@@ -1,0 +1,21 @@
+
+a{color: red;}
+
+a:visited{color: green}
+
+a:hover{color: yellow;}
+
+
+.TurnBlue{color:blue;background-color: beige;}
+
+.TurnPurp{color:purple;background-color: grey;}
+
+.TurnRed{color:red;background-color: darkblue;}
+
+.TurnNavy{color: navy;}
+
+.Spam{color: orange;}
+
+.Para{color: darkgoldenrod;}
+
+#Req{color: aqua;}
