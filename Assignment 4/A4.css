@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+/* Apply Helvetica or Arial font to all text */
+body {font-family: Helvetica, Arial, sans-serif;}
+
+/* Center one paragraph */
+.centered-text {text-align: center;}
+
+/* Justify one paragraph */
+.justified-text {text-align: justify;}
+
+/* Style all headers (h1, h2, etc.) */
+h1, h2, h3, h4, h5, h6 {
+    color: orange;
+    font-style: italic;
+    font-weight: normal;}
+
+
+.Bord {border: 10px solid black; 
+    padding: 10px; 
+    background-color: yellow;}
+
+        body{ background-image: url(WebBG.jpg);}
