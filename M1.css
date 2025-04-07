@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2c3eaf;
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .about {
+    padding: 20px 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  
+  .about h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .work-section {
+    padding: 20px 10px;
+    position: relative;
+  }
+  
+  .work-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block;
+    border-top: 2px solid black;
+    padding-top: 5px;
+  }
+  
+  .gallery-title {
+    float: right;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-top: 2px solid black;
+    padding-top: 5px;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .thumb {
+    width: 30%;
+    padding-top: 30%;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+  }
