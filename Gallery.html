@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <h1 class="gallery-title">GALLERY</h1>
+  <div class="divider"></div>
+
+  <div class="gallery-section">
+    <img src="Beam.jpg" alt="Beam" class="zoomable" onclick="openModal(this)">
+    <img src="Mist.jpg" alt="Mist" class="zoomable" onclick="openModal(this)">
+    <img src="Droplet.jpg" alt="Droplet" class="zoomable" onclick="openModal(this)">
+    <img src="Floral.jpg" alt="Floral" class="zoomable" onclick="openModal(this)">
+    <img src="Lake.jpg" alt="Lake" class="zoomable" onclick="openModal(this)">
+    <img src="Red.jpg" alt="Red" class="zoomable" onclick="openModal(this)">
+  </div>
+
+  <h2 class="gallery-title">BEST WORK</h2>
+  <div class="divider"></div>
+
+  <div class="best-work-section">
+    <img src="Blue.jpg" alt="Blue" class="zoomable" onclick="openModal(this)">
+    <img src="Sunset.jpg" alt="Sunset" class="zoomable" onclick="openModal(this)">
+    <img src="Shapes.jpg" alt="Shapes" class="zoomable" onclick="openModal(this)">
+  </div>
+
+  <footer class="footer">
+    <a href="Home-Page.html" class="footer-button">Home</a>
+    <a href="Contact.html" class="footer-button">Contact</a>
+  </footer>
+
+  
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+
+    function openModal(img) {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+
+    function closeModal() {
+      var modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

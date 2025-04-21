@@ -14,26 +14,44 @@
       <a class="contact-button" href="Contact.html">Contact-Info</a>
     </header>
 
-    <section class="about">
-      <h2>ABOUT ME</h2>
-      <p>Hello. My name is Zaki! I am A sophmore here at ISU majoring in game design. This is my portfolio that contains some of my best photography work!</p>
-    </section>
+    <section class="main-content">
+      <!-- Carousel Section -->
+      <div class="carousel-container">
+        <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="carousel-slide-wrapper">
+          <img src="Blue.jpg" class="carousel-image" style="display: block;">
+          <img src="Shapes.jpg" class="carousel-image">
+          <img src="Sunset.jpg" class="carousel-image">
+        </div>
+        <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
 
-    <section class="work-section">
-      <div class="work-title">PERSONAL WORK</div>
-      <div class="gallery-title">Gallery >>>>></div>
-      <div class="gallery">
-        <div class="thumb">
-          <img src="Blue.jpg" alt="Artwork 1">
-        </div>
-        <div class="thumb">
-          <img src="Shapes.jpg" alt="Artwork 2">
-        </div>
-        <div class="thumb">
-          <img src="Sunset.jpg" alt="Artwork 3">
-        </div>
+      <!-- About Me Section -->
+      <div class="about">
+        <h2>ABOUT ME</h2>
+        <p>Hello. My name is Zaki! I am a sophomore here at ISU majoring in game design. This is my portfolio that contains some of my best photography work!</p>
+
+        <!-- Gallery Button -->
+        <a href="Gallery.html" class="gallery-button">Gallery</a>
       </div>
     </section>
   </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-image');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.style.display = 'none');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].style.display = 'block';
+    }
+
+    function changeSlide(step) {
+      showSlide(currentSlide + step);
+    }
+
+    showSlide(currentSlide);
+  </script>
 </body>
 </html>
