@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Info</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="Contact.css" />
+  <style>
+    .copy-button {
+      margin-top: 10px;
+      background-color: #4a4aff;
+      color: white;
+      padding: 5px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .copy-button:hover {
+      background-color: #3838e0;
+      transform: scale(1.05);
+    }
+
+    .copied-message {
+      font-size: 14px;
+      color: #90ee90;
+      margin-top: 6px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CONTACT-INFO</h1>
+  </header>
+
+  <main>
+    <section class="contact-options">
+      <p>
+        <a href="https://www.instagram.com/jin_zaki05/" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-instagram"></i> <strong>INSTAGRAM</strong>
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.facebook.com/share/1AGtJyZ9DQ/" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-facebook"></i> <strong>FACEBOOK</strong>
+        </a>
+      </p>
+
+
+      <p>
+        <i class="fas fa-envelope"></i> <strong>EMAIL</strong><br />
+        <span id="email-text">zakihowell317@gmail.com</span><br />
+        <button class="copy-button" onclick="copyEmail()">Copy Email</button>
+        <div class="copied-message" id="copied-msg">Copied!</div>
+      </p>
+    </section>
+
+    <section class="info-box">
+      <div class="info-text">
+        <strong>Here you can find all the best ways to contact or find my work.</strong>
+      </div>
+    </section>
+
+    <section class="nav-buttons">
+      <a href="Home-Page.html" class="button">HOME</a>
+      <a href="Gallery.html" class="button">GALLERY</a>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById("email-text").innerText;
+      navigator.clipboard.writeText(email).then(() => {
+        const msg = document.getElementById("copied-msg");
+        msg.style.display = "inline";
+        setTimeout(() => msg.style.display = "none", 2000);
+      });
+    }
+  </script>
+</body>
+</html>

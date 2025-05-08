@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home-Page</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="Home.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="name-block">
+        <div class="name">Zaki Young-Howell</div>
+        <div class="subtitle">Photographer & Level Designer</div>
+      </div>
+      <a class="contact-button" href="Contact.html">Contact-Info</a>
+    </header>
+
+    <section class="main-content">
+      <!-- Carousel Section -->
+      <div class="carousel-container">
+        <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="carousel-slide-wrapper">
+          <img src="Blue.jpg" class="carousel-image" style="display: block;" onclick="zoomImage(this)">
+          <img src="Shapes.jpg" class="carousel-image" onclick="zoomImage(this)">
+          <img src="Depart.jpg" class="carousel-image" onclick="zoomImage(this)">
+          <img src="Half.jpg" class="carousel-image" onclick="zoomImage(this)">
+          <img src="Pink Sun.jpg" class="carousel-image" onclick="zoomImage(this)">
+          <img src="Red Ring.jpg" class="carousel-image" onclick="zoomImage(this)">
+          <img src="Game 3.jpg" class="carousel-image" onclick="zoomImage(this)">
+        </div>
+        <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <!-- About Me Section -->
+      <div class="about">
+        <h2>ABOUT ME</h2>
+        <p>Welcome. I am Zaki Young-Howell. I am currently attending ISU and majoring in Creative Technologies with a focus In Game-Design. This site contains some of my best photography and Projects i've done over the years.</p>
+        <!-- Gallery Button -->
+        <a href="Gallery.html" class="gallery-button">Gallery</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal Zoom Viewer -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-image');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.style.display = 'none');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].style.display = 'block';
+    }
+
+    function changeSlide(step) {
+      showSlide(currentSlide + step);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+
+    showSlide(currentSlide);
+
+    // Image Zoom Modal
+    function zoomImage(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
